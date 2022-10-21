@@ -21,8 +21,10 @@ public class SelectedRestaurant {
     // --- GETTERS ---
     public String getRestaurantId() {return restaurantId;}
     public String getUserId() {return userId;}
+    public Date getDateSelected() {return dateSelected;}
 
     // --- SETTERS ---
     public void setRestaurantId(String restaurantId) {this.restaurantId = restaurantId;}
     public void setUserId(String userId) {this.userId = userId;}
+    public void setDateSelected(Date dateSelected) {this.dateSelected = dateSelected;}
 }
