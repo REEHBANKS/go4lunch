@@ -91,7 +91,7 @@ public class ListRestaurantFragment extends Fragment {
             public void onChanged(List<Restaurant> restaurants) {
 
                 updateUI(restaurants);
-                Log.d("MATHIEU", String.valueOf(restaurants.size()));
+
             }
         });
     }
@@ -102,14 +102,13 @@ public class ListRestaurantFragment extends Fragment {
         mMainViewModel.getOneRestaurantLiveData().observe(getViewLifecycleOwner(), new Observer<Restaurant>() {
             @Override
             public void onChanged(Restaurant restaurant) {
+                updateRestaurantSearch(restaurant);
 
-                Log.d("NAELLY", restaurant.getRestaurantName());
 
             }
         });
     }
-
-
+    
 
     // -----------------
     // CONFIGURATION RECYCLERVIEW
@@ -130,9 +129,9 @@ public class ListRestaurantFragment extends Fragment {
     }
 
     public void updateRestaurantSearch(Restaurant theRestaurant)  {
-      //  restaurants.clear();
-      //  restaurants.add(theRestaurant);
-      //  adapter.notifyDataSetChanged();
+        restaurants.clear();
+        restaurants.add(theRestaurant);
+        adapter.notifyDataSetChanged();
 
         Toast.makeText(getContext(), "je marche", Toast.LENGTH_SHORT).show();
 

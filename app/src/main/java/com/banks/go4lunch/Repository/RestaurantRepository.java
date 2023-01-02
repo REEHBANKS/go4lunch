@@ -38,6 +38,17 @@ public class RestaurantRepository {
         return oneResult;
     }
 
+    private static RestaurantRepository restaurantRepository;
+
+    // Singleton of repository
+    public static RestaurantRepository getInstance(){
+        if(restaurantRepository == null){
+            restaurantRepository = new RestaurantRepository();
+        }
+        return restaurantRepository;
+
+    }
+
 
 
     public void fetchRestaurant(Double latitude, Double longitude) {

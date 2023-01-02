@@ -10,7 +10,7 @@ import java.util.List;
 
 public class MapViewModel extends ViewModel {
 
-    RestaurantRepository restaurantRepository = new RestaurantRepository();
+    RestaurantRepository restaurantRepository =  RestaurantRepository.getInstance();
 
 
     public LiveData<List<Restaurant>> getMapLiveData(){

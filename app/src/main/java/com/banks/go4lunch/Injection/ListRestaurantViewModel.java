@@ -11,7 +11,7 @@ import java.util.List;
 
 public class ListRestaurantViewModel extends ViewModel {
 
-   RestaurantRepository restaurantRepository = new RestaurantRepository();
+   RestaurantRepository restaurantRepository = RestaurantRepository.getInstance();
 
    public LiveData<List<Restaurant>> getRestaurantLiveData(){
       return restaurantRepository.getRestaurantLiveData();
