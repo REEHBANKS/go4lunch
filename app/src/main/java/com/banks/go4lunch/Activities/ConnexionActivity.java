@@ -56,7 +56,7 @@ public class ConnexionActivity extends AppCompatActivity {
     private void startEmailConnexionInActivity(){
 
         // Choose authentication providers
-        List<AuthUI.IdpConfig> providers = Arrays.asList(
+        List<AuthUI.IdpConfig> providers = Collections.singletonList(
 
                 new AuthUI.IdpConfig.EmailBuilder().build());
 
